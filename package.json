@@ -1,4 +1,3 @@
-
 {
   "name": "appai",
   "private": true,
@@ -10,8 +9,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build-frontend": "npm run build --prefix frontend",
-  "start-backend": "node server/server.js",
-  "start": "npm run build-frontend && npm run start-backend"
+    "start-backend": "node server/server.js",
+    "start": "npm run build-frontend && npm run start-backend",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^2.0.3",
@@ -31,8 +32,8 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
+    "gh-pages": "^6.2.0",
     "globals": "^15.14.0",
     "vite": "^6.0.5"
   }
 }
-
