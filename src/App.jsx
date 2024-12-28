@@ -55,7 +55,7 @@ function App() {
     };
 
     // Call your backend endpoint
-    await fetch('http://localhost:5001/api/chat', {
+    await fetch('https://apichatbot-openai-asgj.onrender.com/api/chat', { // Render backend URL
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
