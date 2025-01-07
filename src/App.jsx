@@ -76,7 +76,7 @@ function App() {
         formData.append('file', message.image.file);
         formData.append('text', message.text);
 
-        const response = await fetch('http://localhost:10000/api/upload', {
+        const response = await fetch('https://apichatbot-openai-asgj.onrender.com/api/upload', {
           method: 'POST',
           body: formData,
         });
@@ -89,7 +89,7 @@ function App() {
           { image: { url: data.imageUrl }, sender: 'ChatGPT' },
         ]);
       } else {
-        const response = await fetch('http://localhost:10000/api/chat', {
+        const response = await fetch('https://apichatbot-openai-asgj.onrender.com/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
