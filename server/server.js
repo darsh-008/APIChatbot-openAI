@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173' })); // Allow requests from your frontend
+app.use(cors({ origin: 'https://darsh-008.github.io' })); // Allow requests from your frontend
 
 const upload = multer({ dest: 'uploads/' }); // Temporary folder for uploaded files
 const PORT = process.env.PORT || 10000;
